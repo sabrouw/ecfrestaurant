@@ -1,0 +1,42 @@
+installation de symfony avec la commande composer create-project symfony/website-skeleton ecfjuin
+
+creation de fichier env.local pour entrer les données de la base de données 
+dans URL_DATABASE j'ai paramètré ma base de données sur php myadmin 
+dans le fichier de configuration de base de données je retire la variable APP_SECRET qui est sensiblement secrète. 
+APP_SECRET=4d252316b29b7b691a12cf3388fa74f5
+je créé ma base de données avec la commande php bin/console doctrine:database:create
+ma base de données est maintenant créér sur php myadmin
+
+Une fois créér je doit créér ma base de données à l'aide de mon diagramme de classe que j'ai créé ce matin
+je crée des entités correspondant à mes tables avec l'orm doctrine en ligne de commande. 
+je créé une entité par migration afin de facilité la verification et les modifications
+
+
+ php bin/console make:User
+ php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+
+j'ai selectionner une propriété unique qui aparait pour ma classe user qui sera l'email, il ne pourra pas y avoir 2 email identiques dans la base de données
+J'ai ajouté mes propriété à ma classe user qui aparaitront comme des colonnes dans ma base de données.
+La propriété password 
+
+j'ai ensuite créér à la main mon premier user qui sera mon seul et unique administrateur dans ma base de données.
+j'ai utiliser la commande php bin/console security:hash-password afin de hacher le mot de passe à la main. J'ai copié mon mot de passe en clair puis je l'ai hasher et copier dans ma base de données.
+npm i -g @nestjs/cli
+nest new car-api
+
+J'ai ensuite transformer mon application en api afin de recuperer les données de ma base de données avec react
+installation d'api plateform en ligne de commande avec composer require api, ensuite j'ai entrer les annotation dans chaque entité que je voulais voir sur mon api
+php 8 
+use ApiPlatform\Metadata\ApiResource;
+#[apiResource]
+
+definition application is granted
+
+création des requestes sql dans mes controller afin de recuperer toutes mes entités de ma base de données
+
+classe abstractcontroller pour le render de twig
+je boucle dans mon fichier twig pour afficher tous mes fichiers
+J'ai créée un user avec le role user pour voir si la partie admin sera diférenciée et bien protéger
+Je créér maintenant le crud de mes entity avec les methodes flush pour delete qui utilise la methode entitymanager
+je creer ensuite un formulaire pour la creation de mes entités

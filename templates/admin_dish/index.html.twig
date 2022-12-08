@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminDishController!{% endblock %}
+
+{% block body %}
+{% for dish in dish %}
+{{dish.name}}
+{{dish.description}}
+
+    
+{% endfor %}
+{% endblock %}

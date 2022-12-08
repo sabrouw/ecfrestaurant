@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminAllergyController!{% endblock %}
+
+{% block body %}
+{% for allergy in allergy %}
+{{allergy.name}}
+    
+{% endfor %}
+{% endblock %}
