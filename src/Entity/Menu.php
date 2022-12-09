@@ -5,10 +5,12 @@ namespace App\Entity;
 use App\Repository\MenuRepository;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Get;
 
-
+#[ApiResource(operations: [new Get(), new GetCollection()])]
 #[ORM\Entity(repositoryClass: MenuRepository::class)]
-#[ApiResource]
+
 class Menu
 {
     #[ORM\Id]

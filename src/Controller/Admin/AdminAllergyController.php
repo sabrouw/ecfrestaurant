@@ -31,7 +31,6 @@ class AdminAllergyController extends AbstractController
     public function allergyDelete($id, AllergyRepository $allergyRepository, EntityManagerInterface $entityManager): Response
     {   
         $allergy = $allergyRepository->find($id);
-        \dd($id);
         $entityManager->remove($allergy);
         //on tire la chasse avec flush
         $entityManager->flush();
@@ -57,7 +56,25 @@ class AdminAllergyController extends AbstractController
             'allergyForm' => $allergyForm->createView(),
         ]);
     }
+    #[Route('/admin/allergy/{id}/update', name: 'admin_allergy_update')]
+    public function allergyUpdate($id, AllergyRepository $allergyRepository, Request $request, EntityManagerInterface $entityManager): Response
+    {   
+        $allergy = $allergyRepository->find($id);
+        
+        $allergyForm = $this->createForm(AllergyType::class, $allergy);
+        $allergyForm->handleRequest($request);
+        if($allergyForm->isSubmitted()&& $allergyForm->isValid()){
+            $entityManager->persist($allergy);
+            $entityManager->flush();
+        }
 
+        
+       
+
+        return $this->render('/admin_allergy/allergy_create.html.twig', [
+            'allergyForm' => $allergyForm->createView(),
+        ]);
+    }
 
 
 }

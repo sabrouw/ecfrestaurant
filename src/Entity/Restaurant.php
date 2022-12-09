@@ -4,14 +4,14 @@ namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\GetCollection;
-use App\Repository\DishRepository;
+use App\Repository\RestaurantRepository;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Metadata\Get;
 
+#[ApiResource(operations: [new Get(),new GetCollection()])]
+#[ORM\Entity(repositoryClass: RestaurantRepository::class)]
 
-#[ApiResource(operations: [new Get(), new GetCollection()])]
-#[ORM\Entity(repositoryClass: DishRepository::class)]
-class Dish
+class Restaurant
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -21,11 +21,11 @@ class Dish
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $adress = null;
+
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $description = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $price = null;
 
     public function getId(): ?int
     {
@@ -44,6 +44,18 @@ class Dish
         return $this;
     }
 
+    public function getAdress(): ?string
+    {
+        return $this->adress;
+    }
+
+    public function setAdress(string $adress): self
+    {
+        $this->adress = $adress;
+
+        return $this;
+    }
+
     public function getDescription(): ?string
     {
         return $this->description;
@@ -52,18 +64,6 @@ class Dish
     public function setDescription(?string $description): self
     {
         $this->description = $description;
-
-        return $this;
-    }
-
-    public function getPrice(): ?string
-    {
-        return $this->price;
-    }
-
-    public function setPrice(string $price): self
-    {
-        $this->price = $price;
 
         return $this;
     }
