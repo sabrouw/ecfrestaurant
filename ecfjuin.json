@@ -1,0 +1,71 @@
+[
+{"type":"header","version":"5.2.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"ecfjuin"},
+{"type":"table","name":"allergy","database":"ecfjuin","data":
+[
+{"id":"1","name":"fruit de mer","description":null},
+{"id":"2","name":"fruit à coque","description":null},
+{"id":"3","name":"gluten","description":null},
+{"id":"4","name":"Lactose","description":"produit laitier contenant du lactose"}
+]
+}
+,{"type":"table","name":"category","database":"ecfjuin","data":
+[
+{"id":"1","name":"Desserts","description":"un dessert peut etre une patisserie, une salade de fruit ou une glace faite maison"},
+{"id":"2","name":"Soupes","description":"Les soupes sont faites à base de légume cultivés en France et un bouillon, une soupe peut contenir de la crème fraiche, du fromage, des croutons et peut etre servie froide ou chaude au choix"},
+{"id":"3","name":"Entrées","description":"Une entrée peut etre une salade, un panache de légume avec sauce au choix, une combinaison de fruit de mer"},
+{"id":"4","name":"Desserts","description":"un dessert peut etre une patisserie, une salade de fruit ou une glace faite maison"},
+{"id":"5","name":"Soupes","description":"Les soupes sont faites à base de légume cultivés en France et un bouillon, une soupe peut contenir de la crème fraiche, du fromage, des croutons et peut etre servie froide ou chaude au choix"},
+{"id":"6","name":"Entrées","description":"Une entrée peut etre une salade, un panache de légume avec sauce au choix, une combinaison de fruit de mer"},
+{"id":"7","name":"Viande","description":"Nos viandes sont issues d'animaux élevés sur le sol francais, selection des meilleurs morceaux afin de satisfaire les papilles, la cuisson peut être au choix"},
+{"id":"8","name":"Poissons","description":"Nos poissons sont frais et sont du jour, sans arrète et cuit de façon courte afin de garder les saveurs d'origine"},
+{"id":"9","name":"Desserts","description":"un dessert peut etre une patisserie, une salade de fruit ou une glace faite maison"},
+{"id":"10","name":"Soupes","description":"Les soupes sont faites à base de légume cultivés en France et un bouillon, une soupe peut contenir de la crème fraiche, du fromage, des croutons et peut etre servie froide ou chaude au choix"},
+{"id":"11","name":"Entrées","description":"Une entrée peut etre une salade, un panache de légume avec sauce au choix, une combinaison de fruit de mer"},
+{"id":"12","name":"Viande","description":"Nos viandes sont issues d'animaux élevés sur le sol francais, selection des meilleurs morceaux afin de satisfaire les papilles, la cuisson peut être au choix"},
+{"id":"13","name":"Poissons","description":"Nos poissons sont frais et sont du jour, sans arrète et cuit de façon courte afin de garder les saveurs d'origine"},
+{"id":"14","name":"Burger","description":"Notre pain burger est fait maison et du jour.Nos burger peuvent etre à base de viande hachée, de poulet ou de steak végétal fait maison à base de tofu mariné, ils contiennent des légumes et sauces au choix dans notre liste maison"}
+]
+}
+,{"type":"table","name":"dish","database":"ecfjuin","data":
+[
+
+]
+}
+,{"type":"table","name":"doctrine_migration_versions","database":"ecfjuin","data":
+[
+{"version":"DoctrineMigrations\\Version20221206154309","executed_at":"2022-12-06 16:44:32","execution_time":"1142"},
+{"version":"DoctrineMigrations\\Version20221207042322","executed_at":"2022-12-07 05:23:54","execution_time":"1706"},
+{"version":"DoctrineMigrations\\Version20221207042605","executed_at":"2022-12-07 05:26:23","execution_time":"556"},
+{"version":"DoctrineMigrations\\Version20221207042721","executed_at":"2022-12-07 05:27:29","execution_time":"492"},
+{"version":"DoctrineMigrations\\Version20221208052655","executed_at":"2022-12-08 06:43:46","execution_time":"1323"},
+{"version":"DoctrineMigrations\\Version20221209154252","executed_at":"2022-12-09 16:49:57","execution_time":"9853"}
+]
+}
+,{"type":"table","name":"menu","database":"ecfjuin","data":
+[
+
+]
+}
+,{"type":"table","name":"messenger_messages","database":"ecfjuin","data":
+[
+
+]
+}
+,{"type":"table","name":"reservation","database":"ecfjuin","data":
+[
+
+]
+}
+,{"type":"table","name":"restaurant","database":"ecfjuin","data":
+[
+
+]
+}
+,{"type":"table","name":"user","database":"ecfjuin","data":
+[
+{"id":"1","email":"sabrow@hotmail.fr","roles":"ROLE_ADMIN","password":"$2y$13$3REnlbkthS4jhUnPYm2P6eDef5S4zpw1vtE\/TkXglHlARs7J4KT\/O"},
+{"id":"5","email":"client@hotmail.fr","roles":"ROLE_USER","password":"password"}
+]
+}
+]
