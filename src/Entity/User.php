@@ -10,7 +10,7 @@ use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\GetCollection;
 use ApiPlatform\Metadata\Get;
 
-#[ApiResource(operations: [new Get(), new GetCollection()])]
+//#[ApiResource(operations: [new Get(), new GetCollection()])]
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 
 class User implements UserInterface, PasswordAuthenticatedUserInterface

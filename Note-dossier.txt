@@ -40,3 +40,25 @@ je boucle dans mon fichier twig pour afficher tous mes fichiers
 J'ai créée un user avec le role user pour voir si la partie admin sera diférenciée et bien protéger
 Je créér maintenant le crud de mes entity avec les methodes flush pour delete qui utilise la methode entitymanager
 je creer ensuite un formulaire pour la creation de mes entités
+
+
+dans heroku une fois mis en ligne j'ai transformer mon application symfony en api 
+avec cette commande: heroku addons:create herokuconnect --app=ecf-juin-symfony
+Use `heroku addons:open herokuconnect-amorphous-08998 -a ecf-juin-symfony` to finish setup
+Created herokuconnect-amorphous-08998
+Use heroku addons:docs herokuconnect to view documentation
+
+Client:      <none>
+ID:          97e07766-8ab1-4a40-9faf-60b45c6c512f
+Description: getting started token
+Scope:       global
+Token:       78ab4762-2d3a-449a-96b7-ec5a80afb17d
+Updated at:  Sat Dec 24 2022 09:06:41 GMT+0100 (heure normale d’Europe centrale) (less than a minute ago)
+
+
+machine api.heroku.com
+  login sabrow@hotmail.fr
+  password 450b7aa0-4661-4fe6-93a9-e17d78bbf5a5
+machine git.heroku.com
+  login sabrow@hotmail.fr
+  password 450b7aa0-4661-4fe6-93a9-e17d78bbf5a5
